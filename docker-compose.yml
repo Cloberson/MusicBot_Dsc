@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build: .
+    container_name: discord-bot
+    environment:
+      - YOUR_DSC_TOKEN
+    restart: always
