@@ -25,8 +25,8 @@ Aby uruchomić bota lokalnie, wykonaj następujące kroki:
 Zacznij od sklonowania repozytorium na swoje lokalne środowisko:
 
 ```bash
-git clone https://github.com/TwojeRepozytorium.git
-cd TwojeRepozytorium
+git clone https://github.com/Cloberson/MusicBot_Dsc.git
+cd MusicBot_Dsc
 ```
 
 ### Krok 2: Instalacja zależności
