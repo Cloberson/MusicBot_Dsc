@@ -1,101 +1,137 @@
-# Discord Music Bot 🎶
+# **Discord Music Bot** (PL & ENG)
 
-Bot Discord do odtwarzania muzyki z YouTube. Używa bibliotek `discord.py` oraz `youtube-dl` do odtwarzania dźwięku w kanałach głosowych na serwerze Discord.
+## **PL:**
 
-![Discord Music Bot](https://link-do-twojego-obrazka.jpg)
+**Bot Discord do odtwarzania muzyki z YouTube.** Używa bibliotek `discord.py` oraz `yt-dlp` do odtwarzania dźwięku w kanałach głosowych na serwerze Discord.
 
-## Funkcjonalności 🚀
+### **Funkcjonalności:**
+- Odtwarzanie muzyki z YouTube.
+- Łączenie się z kanałami głosowymi.
+- Możliwość opuszczenia kanału głosowego.
+- Kolejka piosenek.
+- Zmiana głośności (0-100%).
+- Pauza, wznowienie, pomijanie piosenek.
+- Automatyczne usuwanie piosenek po 24h lub po osiągnięciu 100 piosenek w kolejce.
 
-- 🎧 Odtwarzanie muzyki z YouTube.
-- 🎤 Łączenie się z kanałami głosowymi.
-- 🚶‍♂️ Możliwość opuszczenia kanału głosowego.
+### **Instalacja:**
 
-## Instalacja 🔧
+1. **Wymagania:**
+   - Python 3.10+.
+   - Docker (opcjonalnie).
+   - FFmpeg (do dekodowania strumieni audio).
+   - yt-dlp (lub youtube-dl) do pobierania treści z YouTube.
 
-Aby uruchomić bota lokalnie, wykonaj następujące kroki:
+2. **Krok 1: Skopiuj repozytorium:**
+   ```bash
+   git clone https://github.com/Cloberson/MusicBot_Dsc
+   cd MusicBot_Dsc
+   ```
 
-### Wymagania 💻
+3. **Krok 2: Instalacja zależności:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-- **Python 3.10** (lub wyższy)
-- **Docker** (opcjonalnie, do uruchamiania bota w kontenerze)
-- **FFmpeg** (do dekodowania strumieni audio)
+4. **Krok 3: Skonfiguruj bota:**
+   Przejdź do [Discord Developer Portal](https://discord.com/developers/applications), stwórz aplikację, wygeneruj token bota i wstaw go do kodu.
 
-### Krok 1: Skopiuj repozytorium
+5. **Krok 4: Uruchomienie bota:**
+   ```bash
+   python bot.py
+   ```
 
-Zacznij od sklonowania repozytorium na swoje lokalne środowisko:
+6. **Krok 5: Uruchomienie bota w Dockerze:**
+   ```bash
+   docker-compose build
+   docker-compose up -d
+   ```
 
-```bash
-git clone https://github.com/Cloberson/MusicBot_Dsc.git
-cd MusicBot_Dsc
-```
-
-### Krok 2: Instalacja zależności
-
-Wykorzystaj plik `requirements.txt` do zainstalowania wymaganych bibliotek:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Krok 3: Skonfiguruj bota
-
-1. Przejdź do [Discord Developer Portal](https://discord.com/developers/applications), stwórz aplikację i wygeneruj token bota.
-2. Zapisz token i wstaw go do zmiennej `BOT_TOKEN` w kodzie. Możesz ustawić go jako zmienną środowiskową.
-
-Alternatywnie: Możesz dodać token bezpośrednio do pliku `bot.py`, w miejsce `'YOUR_BOT_TOKEN'`:
-
-```python
-bot.run('YOUR_BOT_TOKEN')
-```
-
-### Krok 4: Uruchomienie bota
-
-Po zainstalowaniu zależności i ustawieniu tokenu bota, uruchom bota:
-
-```bash
-python bot.py
-```
-
-### Krok 5: Uruchomienie bota w Dockerze 🐳
-
-Jeśli chcesz uruchomić bota w Dockerze, upewnij się, że masz zainstalowany Docker na swoim systemie. Możesz użyć `docker-compose` do łatwego zarządzania kontenerem.
-
-#### Budowanie obrazu Docker:
-
-```bash
-docker-compose build
-```
-
-#### Uruchomienie bota w Dockerze:
-
-```bash
-docker-compose up -d
-```
-
-## Komendy bota ⚡
-
-- `!play <URL>` - Bot dołączy do kanału głosowego i zacznie odtwarzać muzykę z YouTube.
-- `!leave` - Bot opuści kanał głosowy.
-
-### Krok 6: Wyjście z kanału głosowego
-
-Bot opuści kanał głosowy, kiedy użyjesz komendy `!leave`.
+### **Komendy:**
+- **`!play <URL>`** - Odtwarza muzykę z YouTube.
+- **`!play <nazwa utworu> <autor (opcjonalnie)>`** - Odtwarza muzykę na podstawie podanej nazwy utworu.
+- **`!playauthor <nazwa autora>`** - Odtwarza piosenki autora z YouTube.
+- **`!pause`** - Pauzuje aktualnie odtwarzaną piosenkę.
+- **`!resume`** - Wznawia odtwarzanie.
+- **`!volume <poziom (0-100)>`** - Zmienia głośność.
+- **`!leave`** - Opuści kanał głosowy.
+- **`!skip`** - Pomija aktualną piosenkę.
+- **`!shuffle`** - Losowo odtwarza piosenki.
+- **`!nowplaying`** - Wyświetla aktualnie odtwarzaną piosenkę.
+- **`!stats`** - Pokazuje statystyki bota.
 
 ---
 
-## Licencja 📝
+## **ENG:**
 
-Ten projekt jest licencjonowany na zasadach MIT.
+**Discord Music Bot to play music from YouTube.** It uses the `discord.py` and `yt-dlp` libraries to play audio in voice channels on a Discord server.
+
+### **Features:**
+- Play music from YouTube.
+- Join voice channels.
+- Ability to leave the voice channel.
+- Song queue.
+- Volume control (0-100%).
+- Pause, resume, skip songs.
+- Auto-remove songs after 24 hours or when the queue exceeds 100 songs.
+
+### **Installation:**
+
+1. **Requirements:**
+   - Python 3.10+.
+   - Docker (optional).
+   - FFmpeg (for audio stream decoding).
+   - yt-dlp (or youtube-dl) for downloading content from YouTube.
+
+2. **Step 1: Clone the repository:**
+   ```bash
+   git clone https://github.com/YourRepository.git
+   cd YourRepository
+   ```
+
+3. **Step 2: Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Step 3: Configure the bot:**
+   Go to [Discord Developer Portal](https://discord.com/developers/applications), create an application, generate the bot token, and add it to the code.
+
+5. **Step 4: Run the bot:**
+   ```bash
+   python bot.py
+   ```
+
+6. **Step 5: Run the bot in Docker:**
+   ```bash
+   docker-compose build
+   docker-compose up -d
+   ```
+
+### **Bot Commands:**
+- **`!play <URL>`** - Play music from YouTube.
+- **`!play <song name> <author (optional)>`** - Play music by song name and optional author.
+- **`!playauthor <author name>`** - Play songs by the specified author from YouTube.
+- **`!pause`** - Pause the currently playing song.
+- **`!resume`** - Resume playback.
+- **`!volume <level (0-100)>`** - Adjust the volume level.
+- **`!leave`** - Make the bot leave the voice channel.
+- **`!skip`** - Skip the current song.
+- **`!shuffle`** - Shuffle the songs in the queue.
+- **`!nowplaying`** - Display the currently playing song.
+- **`!stats`** - Show the bot's stats.
 
 ---
 
-## Zastrzeżenia ⚖️
-
-- Bot wykorzystuje bibliotekę `youtube-dl`, która z kolei korzysta z YouTube API. Upewnij się, że przestrzegasz zasad korzystania z YouTube w zakresie pobierania i odtwarzania treści.
-- **FFmpeg** jest niezbędny do prawidłowego odtwarzania dźwięku. Upewnij się, że jest poprawnie zainstalowane w systemie lub kontenerze.
+### **License:**
+This project is licensed under the MIT License.
 
 ---
 
-## Problemy ❗
+### **Disclaimer:**
+- The bot uses `yt-dlp` (or `youtube-dl`), which in turn uses the YouTube API. Ensure that you comply with YouTube's terms of service regarding downloading and playing content.
+- FFmpeg is required for audio playback. Make sure it is installed correctly on your system or container.
 
-Jeśli napotkasz jakiekolwiek problemy, zgłoś je na [Issues](https://github.com/Cloberson/MusicBot_Dsc/issues).
+---
+
+### **Issues:**
+If you encounter any issues, please report them in the repository’s Issues section.
