@@ -1,0 +1,61 @@
+### Lista komend bota
+
+1. **`!play <url>`**
+   - **Opis**: Odtwarza muzykę z YouTube na podstawie podanego URL.
+   - **Przykład**: `!play https://www.youtube.com/watch?v=example_url`
+
+2. **`!play <nazwa utworu> <autor (opcjonalnie)>`**
+   - **Opis**: Odtwarza muzykę z YouTube na podstawie podanej nazwy utworu. Jeśli nie podasz autora, bot spróbuje wyszukać utwór na podstawie tytułu.
+   - **Przykład**: `!play Shape of You`  
+     (lub `!play Shape of You Ed Sheeran` dla precyzyjniejszego wyszukiwania)
+
+3. **`!playauthor <nazwa autora>`**
+   - **Opis**: Bot wyszukuje piosenki danego autora na YouTube i odtwarza je kolejno.
+   - **Przykład**: `!playauthor Ed Sheeran`
+
+4. **`!pause`**
+   - **Opis**: Wstrzymuje aktualnie odtwarzaną piosenkę.
+   - **Przykład**: `!pause`
+
+5. **`!resume`**
+   - **Opis**: Wznawia wstrzymaną piosenkę.
+   - **Przykład**: `!resume`
+
+6. **`!volume <poziom (0-100)>`**
+   - **Opis**: Zmienia głośność odtwarzanej piosenki w zakresie 0–100%.
+   - **Przykład**: `!volume 50`
+
+7. **`!leave`**
+   - **Opis**: Opuszcza kanał głosowy, jeśli bot jest na nim połączony.
+   - **Przykład**: `!leave`
+
+8. **`!skip`**
+   - **Opis**: Pomija aktualnie odtwarzaną piosenkę i przechodzi do następnej w kolejce.
+   - **Przykład**: `!skip`
+
+9. **`!shuffle`**
+   - **Opis**: Losowo odtwarza piosenki z kolejki.
+   - **Przykład**: `!shuffle`
+
+10. **`!nowplaying`**
+    - **Opis**: Wyświetla informację o aktualnie odtwarzanej piosence (tytuł i autor).
+    - **Przykład**: `!nowplaying`
+
+11. **`!stats`**
+    - **Opis**: Pokazuje statystyki bota, takie jak liczba odtworzonych piosenek i liczba unikalnych użytkowników.
+    - **Przykład**: `!stats`
+
+---
+
+### Dodatkowe funkcje:
+
+- **Kolejka piosenek**: Każda piosenka dodana do kolejki jest odtwarzana po poprzedniej, a bot przechodzi do następnej piosenki automatycznie.
+- **Automatyczne usuwanie starych piosenek**: Piosenki starsze niż 24 godziny będą automatycznie usuwane z kolejki. Ponadto, liczba piosenek w kolejce nie może przekroczyć 100.
+- **Odtwarzanie piosenek danego autora**: Funkcja `!playauthor <nazwa autora>` pozwala na odtwarzanie piosenek danego twórcy jeden po drugim.
+
+---
+
+### Przydatne wskazówki:
+
+- **Dołączanie do kanału głosowego**: Aby bot mógł odtwarzać muzykę, musisz być na kanale głosowym na serwerze Discord.
+- **Kolejka i odtwarzanie**: Bot automatycznie przechodzi do następnej piosenki w kolejce, gdy poprzednia zostanie zakończona.

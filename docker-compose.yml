@@ -1,9 +1,27 @@
-version: '3.8'
+version: '3'
 
 services:
-  discord-bot:
+  music-bot:
     build: .
-    container_name: discord-bot
+    container_name: music-bot
     environment:
-      - YOUR_DSC_TOKEN
+      - BOT_TOKEN=YOUR_BOT_TOKEN
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:8080"
     restart: always
+    depends_on:
+      - ffmpeg
+    networks:
+      - bot-network
+
+  ffmpeg:
+    image: jrottenberg/ffmpeg:4.3-alpine
+    container_name: ffmpeg
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge

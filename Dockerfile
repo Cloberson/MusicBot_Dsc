@@ -1,17 +1,21 @@
 # Używamy oficjalnego obrazu Pythona jako bazy
 FROM python:3.10-slim
 
-# Ustawiamy katalog roboczy w kontenerze
+# Instalacja wymaganych narzędzi
+RUN apt-get update && \
+    apt-get install -y \
+    ffmpeg \
+    libsndfile1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Tworzymy i ustawiamy katalog roboczy
 WORKDIR /app
 
-# Kopiujemy pliki z lokalnego systemu do kontenera
+# Kopiowanie plików do kontenera
 COPY . /app
 
-# Instalujemy zależności z pliku requirements.txt
+# Instalacja zależności
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Instalujemy ffmpeg (konieczne do odtwarzania muzyki)
-RUN apt-get update && apt-get install -y ffmpeg && apt-get clean
-
-# Komenda, która uruchamia bota
+# Komenda uruchamiająca bota
 CMD ["python", "bot.py"]
