@@ -98,9 +98,4 @@ Ten projekt jest licencjonowany na zasadach MIT.
 
 ## Problemy ❗
 
-Jeśli napotkasz jakiekolwiek problemy, zgłoś je na [Issues](https://github.com/TwojeRepozytorium/issues).
-```
-
-### Uwagi:
-- **Formatowanie**: Użycie jednego kontenera dla całego pliku Markdown sprawia, że wszystko jest wyświetlane w jednym miejscu, co zapobiega rozjeżdżaniu się treści.
-- **Dodanie obrazka**: Pamiętaj, aby zamienić `https://link-do-twojego-obrazka.jpg` na faktyczny URL obrazka, który chcesz dodać.
+Jeśli napotkasz jakiekolwiek problemy, zgłoś je na [Issues](https://github.com/Cloberson/MusicBot_Dsc/issues).
